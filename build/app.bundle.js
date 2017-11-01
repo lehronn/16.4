@@ -10171,7 +10171,7 @@ var App = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: _App2.default.TodoTitle },
+        { className: _App2.default.TodoApp },
         _react2.default.createElement(_Title2.default, null)
       );
     }

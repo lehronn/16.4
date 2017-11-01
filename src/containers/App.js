@@ -28,7 +28,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div className={style.TodoTitle}>
+      <div className={style.TodoApp}>
         <Title />
       </div>
     );
