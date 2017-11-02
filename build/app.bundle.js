@@ -10172,7 +10172,7 @@ var App = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: _App2.default.TodoApp },
-        _react2.default.createElement(_Title2.default, null)
+        _react2.default.createElement(_Title2.default, { todoCount: this.state.data.length })
       );
     }
   }]);
@@ -10533,23 +10533,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Title = function (_React$Component) {
   _inherits(Title, _React$Component);
 
-  function Title(props) {
+  function Title() {
     _classCallCheck(this, Title);
 
-    var _this = _possibleConstructorReturn(this, (Title.__proto__ || Object.getPrototypeOf(Title)).call(this, props));
-
-    _this.state = {
-      data: []
-    };
-    return _this;
+    return _possibleConstructorReturn(this, (Title.__proto__ || Object.getPrototypeOf(Title)).apply(this, arguments));
   }
 
   _createClass(Title, [{
-    key: 'showItemQuantity',
-    value: function showItemQuantity() {
-      return this.props.innerText = this.props(data.length);
-    }
-  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -10560,7 +10550,12 @@ var Title = function (_React$Component) {
           null,
           'TodoList App'
         ),
-        'Getting Things Done stuff: showItemQuantity();'
+        'Getting Things Done stuff:',
+        _react2.default.createElement(
+          'span',
+          null,
+          this.props.todoCount
+        )
       );
     }
   }]);

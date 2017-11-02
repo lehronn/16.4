@@ -29,7 +29,7 @@ class App extends React.Component {
   render() {
     return (
       <div className={style.TodoApp}>
-        <Title />
+        <Title todoCount={this.state.data.length}/>
       </div>
     );
   }
