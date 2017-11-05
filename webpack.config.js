@@ -31,9 +31,9 @@ new HtmlWebpackPlugin({
 //webpack configuration
 module.exports = {
   entry: [
-            'react-hot-loader/patch',
-         './src/index.js'
-    ],
+          'react-hot-loader/patch',
+          './src/index.js'
+          ],
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'app.bundle.js'
