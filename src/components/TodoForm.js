@@ -23,9 +23,8 @@ class TodoForm extends React.Component {
     onSubmitHandler(event) {
       debugger
       this.props.addTodo(this.state.inputForm)
-      console.log('lol');
- 	}
- 	onChange(event) {
+    }
+    onChange(event) {
       this.setState({inputForm: event.target.value});
     }
       //walidacja i ustawienie domyślnych propsów
