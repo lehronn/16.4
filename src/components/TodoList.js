@@ -1,8 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // import style from './TodoList.css';
 
 class TodoList extends React.Component {
-  //walidacja proptypes i props default
+  constructor(props) {
+    super(props);
+    //walidacja proptypes i props default
+    TodoList.propTypes = {
+      key: PropTypes.object,
+      onClick: PropTypes.object
+    },
+    TodoList.defaultProps = {
+      key: {},
+      onClick: {}
+    }
+  }
 
   render() {
     console.log(this.props.data);

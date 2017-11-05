@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import uuid from 'uuid';
 import style from './App.css';
 import Title from '../components/Title';
@@ -21,6 +22,21 @@ class App extends React.Component {
         }
       ]
     };
+      //walidacja i ustawienie domyślnych propsów
+    App.propTypes = {
+        key: PropTypes.object,
+        className: PropTypes.string,
+        todoCount: PropTypes.object,
+        data: PropTypes.object,
+        remove: PropTypes.object
+      },
+    App.defaultProps = {
+      key: 0,
+      className: '',
+      todoCount: {},
+      data:{},
+      remove:{}
+    }
   }
   addTodo(val) {
     const todo = {
