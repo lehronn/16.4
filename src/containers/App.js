@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import uuid from 'uuid';
 import style from './App.css';
 import Title from '../components/Title';
+import TodoForm from '../components/TodoForm';
 import TodoList from '../components/TodoList';
 
 class App extends React.Component {
@@ -25,17 +26,11 @@ class App extends React.Component {
       //walidacja i ustawienie domyślnych propsów
     App.propTypes = {
         key: PropTypes.object,
-        className: PropTypes.string,
-        todoCount: PropTypes.object,
         data: PropTypes.object,
-        remove: PropTypes.object
       },
     App.defaultProps = {
       key: 0,
-      className: '',
-      todoCount: {},
       data:{},
-      remove:{}
     }
   }
   addTodo(val) {
@@ -58,6 +53,7 @@ class App extends React.Component {
     return (
       <div className={style.TodoApp}>
         <Title todoCount={this.state.data.length}/>
+        <TodoForm data={this.state.data} add={this.addTodo.bind(this)}/>
         <TodoList data={this.state.data} remove={this.removeTodo.bind(this)}/>
 
       </div>
