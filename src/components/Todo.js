@@ -8,21 +8,21 @@ class Todo extends React.Component {
   
   render() {
     return (
-      <li className={style.Todo}>
-        {this.props.todo}
-        <button className="removeButton" onClick = {event => this.handleClick()}>Remove</button>
-      </li>
-    )
-  }
-  handleClick(event) {
-    this.props.remove(this.props.id)
+      <div className={style.TodoList}>
+        {this.props.data.map(item => (
+          <span>
+            {item.text}
+            <button className="removeButton" onClick={()=> this.props.remove(item.id)}>Delete</button>
+          </span>
+        ))}
+      </div>
+    );
   }
 }
 
-//walidacja proptypes i props default
-Todo.propTypes = {
+TodoList.propTypes = {
   remove: PropTypes.func.isRequired,
-  todo: PropTypes.func.isRequired
+  data: PropTypes.array.isRequired
 };
 
 export default Todo;
