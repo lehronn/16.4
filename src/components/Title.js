@@ -7,9 +7,10 @@ class Title extends React.Component {
   render() {
     return (
       <div className={style.TodoTitle}>
-      <h1>TodoList App</h1>
-      Getting Things Done stuff:
-      <span>{this.props.todoCount}</span>
+      <h1>Getting Things Done</h1>
+      <p>List item to do:
+        <span> {this.props.todoCount}</span>
+      </p>
       </div>
     );
   }

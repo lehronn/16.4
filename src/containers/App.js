@@ -29,7 +29,6 @@ class App extends React.Component {
       text: val,
       id: uuid.v4(),
     };
-    console.log(todo);
     const data = [...this.state.data, todo];
     this.setState({
       data
@@ -44,9 +43,9 @@ class App extends React.Component {
   render() {
     return (
       <div className={style.TodoApp}>
-        <Title todoCount={this.state.data.length}/>
-        <TodoForm id={this.state.id} data={this.state.data} add={this.addTodo.bind(this)}/>
-        <TodoList data={this.state.data} remove={this.removeTodo.bind(this)}/>
+        <Title className={style.TodoTitle} todoCount={this.state.data.length}/>
+        <TodoForm className={style.TodoForm} id={this.state.id} data={this.state.data} add={this.addTodo.bind(this)}/>
+        <TodoList className={style.TodoList} data={this.state.data} remove={this.removeTodo.bind(this)}/>
 
       </div>
     );

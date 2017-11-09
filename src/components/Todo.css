@@ -1,12 +1,6 @@
-h1 {
-    background-color: wheat;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 30vw;
-    height: 30vh;
+.Todo {
+  width: 40vw;
+  margin: 0 auto;
+  border: 2px black solid;
 }
+

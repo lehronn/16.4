@@ -10,7 +10,7 @@ class Todo extends React.Component {
     return (
       <li className={style.Todo}>
         {this.props.todo}
-        <button onClick = {event => this.handleClick()}>Remove</button>
+        <button className="removeButton" onClick = {event => this.handleClick()}>Remove</button>
       </li>
     )
   }
@@ -18,4 +18,12 @@ class Todo extends React.Component {
     this.props.remove(this.props.id)
   }
 }
+
+//walidacja proptypes i props default
+Todo.propTypes = {
+  remove: PropTypes.func.isRequired,
+  todo: PropTypes.func.isRequired
+};
+
 export default Todo;
+

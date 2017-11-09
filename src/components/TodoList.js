@@ -5,30 +5,25 @@ import style from './TodoList.css';
 class TodoList extends React.Component {
   constructor(props) {
     super(props);
-    //walidacja proptypes i props default
-    TodoList.propTypes = {
-      key: PropTypes.object,
-      onClick: PropTypes.object
-    },
-    TodoList.defaultProps = {
-      key: {},
-      onClick: {}
-    }
   }
 
   render() {
-    console.log(this.props.data);
     return (
-      <div>
-        {this.props.data.map(item => (
-          <div key={item.id}>
+      <div className={style.TodoList}>
+        <ul>{this.props.data.map(item => (
+          <li key={item.id}>
             {item.text}
-            <button onClick={()=> this.props.remove(item.id)}>Delete</button>
-          </div>
-        ))}
+            <button className="removeButton" onClick={()=> this.props.remove(item.id)}>Delete</button>
+          </li>
+        ))}</ul>
       </div>
     );
   }
 }
+
+TodoList.propTypes = {
+  remove: PropTypes.func.isRequired,
+  data: PropTypes.array.isRequired
+};
 
 export default TodoList;
