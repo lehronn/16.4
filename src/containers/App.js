@@ -23,21 +23,13 @@ class App extends React.Component {
         }
       ]
     };
-      //walidacja i ustawienie domyślnych propsów
-    App.propTypes = {
-        key: PropTypes.object,
-        data: PropTypes.object,
-      },
-    App.defaultProps = {
-      key: 0,
-      data:{},
-    }
   }
   addTodo(val) {
     const todo = {
       text: val,
       id: uuid.v4(),
     };
+    console.log(todo);
     const data = [...this.state.data, todo];
     this.setState({
       data
