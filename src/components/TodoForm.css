@@ -1,0 +1,20 @@
+.TodoForm {
+  box-sizing: border-box;
+  background-color: wheat;
+  width: 40vw;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  padding: 5px;
+}
+
+input {
+  width: 70%;
+}
+
+.addButton {
+  padding: 2px 7px 2px 7px;
+  margin-left: 15px;
+  color: darkgreen;
+}
